@@ -5,14 +5,14 @@ title: Resume
 
 # Tarik Perviz
 Sarajevo, BiH • 30.04.2003.  
-**Status:** Apsolvent na International Burch University (IT) — ostao diplomski rad
+**Status:** Apsolvent na International Burch University (IT)
 
-[GitHub](https://github.com/TarikPerviz) • [LinkedIn](#) • [Email](mailto:your-email@tarikperviz.me)
+[GitHub](https://github.com/TarikPerviz) • [LinkedIn](https://www.linkedin.com/in/tarik-perviz) • [Email](mailto:perviztarik@gmai.com)
 
 ---
 
 ## Sažetak
-Software Engineering student fokusiran na **web & mobile** razvoj. Iskustvo kroz **Finshark internship** i **Upwork freelancing**. Volim čist kod, jasan UX i brze iteracije — cilj je **shipati stabilna rješenja**.
+Software Engineering student fokusiran na **web & mobile** razvoj. Iskustvo kroz **Finshark internship** i **Upwork freelancing**.
 
 ## Tehnologije
 - **Frontend:** HTML, CSS, JavaScript, **TypeScript**, **React**
@@ -55,6 +55,5 @@ Software Engineering student fokusiran na **web & mobile** razvoj. Iskustvo kroz
 Apsolvent (preostao diplomski rad)
 
 ## Dodatno
-- **Alati:** Git/GitHub, Azure DevOps, Jira, Notion  
-- **Komunikacija:** jasna dokumentacija, task breakdown, demo sesije  
+- **Alati:** Git/GitHub, Azure DevOps   
 - **Jezici:** bosanski (native), engleski (profesionalno)
