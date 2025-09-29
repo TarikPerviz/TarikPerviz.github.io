@@ -1,0 +1,15 @@
+title: Tarik Perviz
+description: Software Engineering student • Web & Mobile dev • Projekat Studio
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+# Links shown in header/footer (edit to your profiles)
+author: Tarik Perviz
+email: mail@tarikperviz.me
+github_username: TarikPerviz
+linkedin: https://www.linkedin.com/in/tarikperviz
+upwork: https://www.upwork.com/freelancers/~your-id
+
+# (Optional) build tweaks
+markdown: kramdown
