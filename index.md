@@ -7,7 +7,7 @@ title: Resume
 Sarajevo, BiH • 30.04.2003.  
 **Status:** Apsolvent na International Burch University (IT)
 
-[GitHub](https://github.com/TarikPerviz) • [LinkedIn](https://www.linkedin.com/in/tarik-perviz) • [Email](mailto:perviztarik@gmai.com)
+[GitHub](https://github.com/TarikPerviz) • [LinkedIn](https://www.linkedin.com/in/tarik-perviz) • [Email](mailto:perviztarik@gmail.com)
 
 ---
 
