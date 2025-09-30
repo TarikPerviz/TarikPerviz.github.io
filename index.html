@@ -273,18 +273,15 @@
             <a class="btn" href="/resume">View Resume</a>
           </div>
         </div>
-        <form action="https://formspree.io/f/xkgqrqpk" method="POST">
-  <input type="hidden" name="_subject" value="New message from tarikperviz.me">
-  <input type="text" name="name" placeholder="Your name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <textarea name="message" placeholder="Tell me about your project…" required></textarea>
-
-  <!-- anti-spam honeypot -->
-  <input type="text" name="_gotcha" style="display:none">
-
-  <!-- redirect nakon slanja (napravi thanks.html) -->
-  <input type="hidden" name="_next" value="https://tarikperviz.me/thanks.html">
-  <button class="btn primary" type="submit">Send</button>
+        <form action="https://formspree.io/f/xkgqrqpk" method="POST" class="panel" name="contact">
+<h3>Quick message</h3>
+<input type="hidden" name="form-name" value="contact" />
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px">
+<input name="name" placeholder="Your name" required>
+<input type="email" name="email" placeholder="Email" required>
+</div>
+<textarea name="message" placeholder="Write your message here…" style="margin-top:10px" required></textarea>
+<button class="btn primary" type="submit" style="margin-top:10px">Send</button>
 </form>
 
       </div>
