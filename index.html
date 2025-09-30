@@ -54,6 +54,12 @@
     @media (max-width: 820px){
       .nav{ position:relative }
       .hamburger{ display:inline-flex }
+      .menu{ position:absolute; right:24px; top:54px; display:none; flex-direction:column; gap:8px; background:rgba(13,13,20,.96); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.1); border-radius:14px; padding:12px; width:min(86vw, 360px); box-shadow: 0 18px 50px rgba(0,0,0,.55); z-index:50 }
+      .menu.open{ display:flex }
+      .menu .btn{ width:100%; justify-content:center; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03) }
+      .menu .btn.primary{ background: linear-gradient(135deg, var(--brand), var(--brand-2)); border:none; color:#0a0a0f }
+    }
+      .hamburger{ display:inline-flex }
       .menu{ position:absolute; right:24px; top:54px; display:none; flex-direction:column; gap:10px; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:12px; width:min(86vw, 360px); box-shadow: var(--shadow-2) }
       .menu.open{ display:flex }
       .menu .btn{ width:100% }
@@ -289,7 +295,7 @@
         </div>
 
         <!-- RIGHT: Form panel (side‑by‑side on desktop, below on mobile) -->
-        <form action="https://formspree.io/f/xkgqrqpk" method="POST" class="panel" name="contact">
+        <form action="https://formspree.io/f/xkgqrqpk" method="POST" class="panel" name="contact" autocomplete="off">
           <h3>Quick message</h3>
           <input type="hidden" name="form-name" value="contact" />
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px">
@@ -334,6 +340,20 @@
       });
     }, {threshold:.12});
     document.querySelectorAll('.project, .hero-card, .panel, .timeline .item, .skill').forEach(el=>reveal.observe(el));
+  // enhance mobile menu close & form reset
+    (function(){
+      const hb=document.querySelector('.hamburger');
+      const menu=document.getElementById('menu');
+      if(hb && menu){
+        document.addEventListener('click', (e)=>{ if(!menu.contains(e.target) && !hb.contains(e.target)) menu.classList.remove('open'); });
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') menu.classList.remove('open'); });
+      }
+      const contact=document.querySelector('form[name="contact"]');
+      if(contact){
+        contact.addEventListener('submit', ()=>{ setTimeout(()=>{ try{ contact.reset(); }catch(_){} }, 120); });
+        window.addEventListener('pageshow', (ev)=>{ if(ev.persisted){ try{ contact.reset(); }catch(_){} } });
+      }
+    })();
   </script>
 </body>
 </html>
