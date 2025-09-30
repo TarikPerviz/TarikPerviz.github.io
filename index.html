@@ -68,6 +68,17 @@
     .subtitle{ color:var(--muted); font-size: clamp(16px, 2.2vw, 18px) }
     .cta{ display:flex; gap:12px; margin-top:22px; flex-wrap:wrap }
 
+    /* visibility helpers */
+    .desktop-only{ display:inline }
+    .mobile-only{ display:none }
+    .email-line{ margin-top:8px; color:var(--muted) }
+    .email-line a{ text-decoration:underline; text-underline-offset:3px }
+
+    @media (max-width: 980px){
+      .desktop-only{ display:none }
+      .mobile-only{ display:inline-flex }
+    }
+
     .hero-card{ background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow-2) }
     .hero-card h4{ margin:0 0 8px 0 }
     .hero-card p{ margin:0; color:var(--muted) }
@@ -157,7 +168,7 @@
           </div>
           <div class="hero-card">
             <h4>Available for</h4>
-            <p>Full-time job, Freelance work (web/app), internships, and collaborations. Let's build something great.</p>
+            <p>Freelance work (web/app), internships, and collaborations. Let's build something great.</p>
           </div>
         </div>
       </div>
@@ -229,12 +240,12 @@
         <div class="timeline">
           <div class="item">
             <h4>Software Engineering Intern — Finshark</h4>
-            <small>2024 — 2025</small>
+            <small>2024 — now</small>
             <p style="color:var(--muted)">Internal tools & web‑apps • Azure integrations • Azure DevOps (Boards, Repos, Pipelines).</p>
           </div>
           <div class="item">
             <h4>Freelance Developer/Designer — Upwork</h4>
-            <small>2025 — now</small>
+            <small>2023 — now</small>
             <p style="color:var(--muted)">Portfolios, landing pages, mobile prototypes • Client communication, scope & milestones.</p>
           </div>
         </div>
@@ -268,22 +279,23 @@
         <div class="panel">
           <h3>Let’s build something great</h3>
           <p style="color:var(--muted); margin-top:6px">Currently open for jobs, freelance, internships and collabs. Sarajevo • Remote‑friendly.</p>
+          <p class="email-line desktop-only">📧 <a href="mailto:perviztarik@gmail.com">perviztarik@gmail.com</a></p>
           <div class="cta" style="margin-top:12px">
-            <a class="btn primary" href="mailto:perviztarik@gmail.com">Contact me</a>
+            <a class="btn primary mobile-only" href="mailto:perviztarik@gmail.com">Contact me</a>
             <a class="btn" href="/resume">View Resume</a>
           </div>
         </div>
-        <form action="https://formspree.io/f/xkgqrqpk" method="POST" class="panel" name="contact">
-<h3>Quick message</h3>
-<input type="hidden" name="form-name" value="contact" />
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px">
-<input name="name" placeholder="Your name" required>
-<input type="email" name="email" placeholder="Email" required>
-</div>
-<textarea name="message" placeholder="Write your message here…" style="margin-top:10px" required></textarea>
-<button class="btn primary" type="submit" style="margin-top:10px">Send</button>
-</form>
-
+        </div>
+        <form class="panel" name="contact" netlify>
+          <h3>Quick message</h3>
+          <input type="hidden" name="form-name" value="contact" />
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px">
+            <input name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+          <textarea name="message" placeholder="Tell me about your project…" style="margin-top:10px" required></textarea>
+          <button class="btn primary" type="submit" style="margin-top:10px">Send</button>
+        </form>
       </div>
     </section>
   </main>
