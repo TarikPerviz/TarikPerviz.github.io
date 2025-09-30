@@ -51,6 +51,12 @@
     .hamburger:hover{ border-color: rgba(255,255,255,.2) }
     .menu{ display:flex; align-items:center }
 
+    /* Force desktop navbar */
+    @media (min-width: 821px){
+      .hamburger{ display:none !important }
+      .menu{ display:flex !important; position:static !important; background:transparent !important; border:0 !important; padding:0 !important; box-shadow:none !important; width:auto !important }
+    }
+
     @media (max-width: 820px){
       .nav{ position:relative }
       /* Show hamburger ONLY on mobile */
@@ -65,17 +71,6 @@
       .menu .btn.primary{ background: linear-gradient(135deg, var(--brand), var(--brand-2)); border:none; color:#0a0a0f }
     }
     @keyframes dropdown{ from{ opacity:0; transform: translateY(-6px) } to{ opacity:1; transform:none } }
-      .hamburger{ display:inline-flex }
-      .menu{ position:absolute; right:24px; top:54px; display:none; flex-direction:column; gap:8px; background:rgba(13,13,20,.96); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.1); border-radius:14px; padding:12px; width:min(86vw, 360px); box-shadow: 0 18px 50px rgba(0,0,0,.55); z-index:50 }
-      .menu.open{ display:flex }
-      .menu .btn{ width:100%; justify-content:center; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03) }
-      .menu .btn.primary{ background: linear-gradient(135deg, var(--brand), var(--brand-2)); border:none; color:#0a0a0f }
-    }
-      .hamburger{ display:inline-flex }
-      .menu{ position:absolute; right:24px; top:54px; display:none; flex-direction:column; gap:10px; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.1); border-radius:12px; padding:12px; width:min(86vw, 360px); box-shadow: var(--shadow-2) }
-      .menu.open{ display:flex }
-      .menu .btn{ width:100% }
-    }
 
     /* hero */
     .hero{ position:relative; padding: 80px 0 40px }
