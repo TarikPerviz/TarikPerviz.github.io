@@ -5,55 +5,75 @@ title: Resume
 
 # Tarik Perviz
 Sarajevo, BiH • 30.04.2003.  
-**Status:** Apsolvent na International Burch University (IT)
+**Junior Frontend Developer**
 
 [GitHub](https://github.com/TarikPerviz) • [LinkedIn](https://www.linkedin.com/in/tarik-perviz) • [Email](mailto:perviztarik@gmail.com)
 
 ---
 
-## Sažetak
-Software Engineering student fokusiran na **web & mobile** razvoj. Iskustvo kroz **Finshark internship** i **Upwork freelancing**.
+## Profil
+Junior Frontend Developer fokusiran na izradu **modernih, brzih i vizuelno čistih web i mobilnih aplikacija**.  
+Iskustvo kroz rad na **prediction market platformi (MasterBuild)**, **Finshark internship**, te **freelance projekte** u web dizajnu i razvoju.
+
+---
 
 ## Tehnologije
-- **Frontend:** HTML, CSS, JavaScript, **TypeScript**, **React**
-- **Mobile:** **React Native**, **Flutter**
-- **CMS / e-commerce:** **WordPress (Bricks Builder)**, **Shopify**
-- **Backend & jezici:** Java, C++, Python
-- **Cloud / DevOps:** **Azure DevOps**, Microsoft Azure (Entra ID / App Services / DB)
-- **Design:** **Figma** (UI/UX, prototipi)
+- **Frontend:** HTML, CSS, JavaScript, React, Next.js  
+- **Mobile:** Flutter, React Native  
+- **Backend / API:** .NET API integracije, Java osnove  
+- **DevOps / Cloud:** Azure DevOps, CI/CD, Entra ID (SSO)  
+- **CMS & e-commerce:** WordPress (Bricks), Shopify  
+- **Design:** Figma (UI/UX, prototipovi)
+
+---
 
 ## Iskustvo
-**Finshark — Software Engineering Intern**  
-*2024 —*  
-- Rad na internim web-appovima i integracijama sa **Microsoft Azure**.  
-- **Azure DevOps**: Boards, Repos, Pipelines; code review i kolaboracija u timu.
 
-**Upwork — Freelance Developer / Designer**  
-*2023 —*  
-- Dizajn i razvoj portfolia, landing stranica i mobilnih prototipa.  
-- Komunikacija s klijentima, procjena scope-a, milestone isporuke, osnovno održavanje.
+### **Junior Frontend Developer — MasterBuild**  
+*2025 — sada*  
+- Rad na prediction-market web platformi (React + .NET API).  
+- Autentikacija, dashboardi, UI komponente, optimizacija performansi.  
 
-## Odabrani Projekti
-**Finshark Customer Support Web-App** — *(React + Spring Boot + Microsoft Azure)*  
-- **SSO / Entra ID** i role-based access.  
-- **Customer DB tabela** s naprednim filterima (status, prioritet, SLA, assigned agent) radi bržeg odgovora support tima.  
-- CI/CD preko **Azure DevOps**; fokus na performanse listi i UX.
+### **Software Engineering Intern — Finshark**  
+*2024 — 2025*  
+- Izrada internog alata za Customer Support tim.  
+- **Azure integracije**, SSO (Entra ID), RBAC, DevOps pipelines.  
 
-**Muzej književnosti i pozorišne umjetnosti BiH — Website Redesign** — *(Figma → WordPress + Bricks)*  
-- Novi UX flow za izložbe/vijesti; **custom Bricks komponente**, SEO struktura, optimizacija učitavanja.
+### **Freelance Developer/Designer — Upwork**  
+*2025 — sada*  
+- Izrada portfolia, landing stranica, mobilnih prototipa i mini web-aplikacija.  
+- Klijentska komunikacija, definisanje scope-a, isporuka milestone-a.
 
-**MOCO Museum London — Minimal Redesign** — *(WordPress + Bricks)*  
-- Redesign u **minimal aesthetic**; tipografija, hijerarhija sadržaja, unaprijeđena navigacija.
+---
 
-**TravelGenie — Travel Assistant App (ongoing)** — *(Flutter)*  
-- **Trip planning**: itinerari, budžet, smještaj, bilješke.  
-- Arhitektura predviđena za **Firebase** i kasnije **Stripe/in-app payments**.  
-- Figma dizajn → Flutter implementacija; priprema za MVP.
+## Projekti
+
+### **Finshark Web-app (Customer Support)**  
+*React • Spring Boot • Azure*  
+- SSO (Entra ID), RBAC, tabela korisnika s naprednim filterima.  
+- CI/CD kroz Azure DevOps; fokus na UX i brzinu listanja podataka.
+
+### **PRIME — Prediction Market Platform**  
+*Next.js • React • .NET API*  
+- Frontend funkcionalnosti, auth, integracije sa backend servisima.  
+
+### **HcareMed — Online Healthcare Service**  
+*WordPress • Bricks*  
+- Integracija plaćanja, WooCommerce, subscription modeli.  
+
+### **TravelCini — Travel Assistant App (MVP)**  
+*Flutter • Firebase*  
+- Trip planning, prijatelji, chat, TripAdvisor integracije.  
+- MVP backend struktura + Figma → Flutter implementacija.
+
+---
 
 ## Obrazovanje
-**International Burch University — IT**  
-Apsolvent (preostao diplomski rad)
+**International Burch University — Software Engineering**  
+Apsolvent (preostao završni rad)
 
-## Dodatno
-- **Alati:** Git/GitHub, Azure DevOps   
-- **Jezici:** bosanski (native), engleski (profesionalno)
+---
+
+## Ostalo
+- **Alati:** Git/GitHub, Azure DevOps  
+- **Jezici:** Bosanski (native), Engleski (profesionalno)
