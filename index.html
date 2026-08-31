@@ -2,390 +2,283 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-  <title>Tarik Perviz — Portfolio</title>
-  <!-- Favicon / Tab icon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-  <link rel="alternate icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
-  <link rel="shortcut icon" href="/assets/img/favicon-32.png">
-  <meta name="theme-color" content="#0b0b10">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Tarik Perviz</title>
 
-  <meta name="description" content="Software Engineering student • Web & Mobile dev • Projekat Studio" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="Tarik Perviz, full-stack engineer in Sarajevo. Prediction markets, marketplaces, and AI systems." />
+  <meta property="og:title" content="Tarik Perviz" />
+  <meta property="og:description" content="Full-stack engineer in Sarajevo. Prediction markets, marketplaces, and AI systems." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tarikperviz.me/" />
+  <meta property="og:image" content="https://tarikperviz.me/assets/img/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg: #0b0b10;
-      --bg-2: #0e0e14;
-      --card: #14141c;
-      --muted: #a5acc1;
-      --text: #e7e9f1;
-      --brand: #7c5cff; /* primary gradient stop */
-      --brand-2: #00d4ff; /* secondary gradient stop */
-      --accent: #24e0a8;
-      --danger: #ff477e;
-      --ring: rgba(124,92,255,.55);
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --shadow-2: 0 20px 60px rgba(0,0,0,.45);
-      --max: 1200px;
+      --paper: #ffffff;
+      --ink: #1b1a18;
+      --muted: #6f6b64;
+      --faint: #d9d5cf;
+      --pitch: #1c5d3d;
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
     }
-    * { box-sizing: border-box }
-    html,body{ height:100%; width:100%; max-width:100%; overscroll-behavior: none; }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --paper: #151412;
+        --ink: #e9e6e0;
+        --muted: #97918a;
+        --faint: #3a3733;
+        --pitch: #74b791;
+      }
+    }
+
+    *{ box-sizing: border-box }
+    html{ -webkit-text-size-adjust: 100% }
     body{
-      margin:0; background: radial-gradient(1200px 600px at 80% -10%, rgba(124,92,255,.15), transparent 60%), radial-gradient(900px 500px at -10% 20%, rgba(0,212,255,.12), transparent 60%), var(--bg);
-      color:var(--text); font: 16px/1.5 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      overflow-x:hidden;
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1.55;
+      font-optical-sizing: auto;
     }
-    a{ color:inherit; text-decoration:none }
-    .container{ width:100%; max-width:var(--max); margin-inline:auto; padding: 0 24px }
-    header{
-      position:sticky; top:0; z-index:40; backdrop-filter: blur(8px); background:linear-gradient(to bottom, rgba(11,11,16,.8), rgba(11,11,16,.2)); border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 0 }
-    .logo{ display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.3px }
-    .badge{ font-size:12px; color:var(--muted) }
-    .nav a.btn{ margin-left:10px } /* keep */
-
-    .btn{ display:inline-flex; align-items:center; gap:10px; padding:10px 16px; border-radius:999px; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.02); transition:.25s ease; box-shadow: var(--shadow) }
-    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,.22) }
-    .btn.primary{ background: linear-gradient(135deg, var(--brand), var(--brand-2)); border: none; color:#0a0a0f; font-weight:700 }
-
-    /* mobile nav */
-    .hamburger{ display:none; align-items:center; justify-content:center; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); border-radius:10px; padding:8px; cursor:pointer; transition:.2s}
-    .hamburger:hover{ border-color: rgba(255,255,255,.2) }
-    .menu{ display:flex; align-items:center }
-
-    /* Force desktop navbar */
-    @media (min-width: 821px){
-      .hamburger{ display:none !important }
-      .menu{ display:flex !important; position:static !important; background:transparent !important; border:0 !important; padding:0 !important; box-shadow:none !important; width:auto !important }
+    .page{
+      max-width: 41rem;
+      margin: 0 auto;
+      padding: clamp(3rem, 10vh, 7rem) 1.5rem 4rem;
     }
 
-    @media (max-width: 820px){
-      .nav{ position:relative }
-      /* Show hamburger ONLY on mobile */
-      .hamburger{ display:inline-flex }
-      /* Convert menu to dropdown on mobile */
-      .menu{ position:absolute; right:24px; top:54px; display:none; flex-direction:column; gap:10px; 
-        background:#0b0b10; /* solid, not transparent */
-        border:1px solid rgba(124,92,255,.35); border-radius:14px; padding:14px; 
-        width:min(86vw, 360px); box-shadow: 0 22px 60px rgba(0,0,0,.65); z-index:50 }
-      .menu.open{ display:flex; animation: dropdown .14s ease-out }
-      .menu .btn{ width:100%; justify-content:center; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.04) }
-      .menu .btn.primary{ background: linear-gradient(135deg, var(--brand), var(--brand-2)); border:none; color:#0a0a0f }
-    }
-    @keyframes dropdown{ from{ opacity:0; transform: translateY(-6px) } to{ opacity:1; transform:none } }
+    a{ color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--faint); transition: text-decoration-color .15s ease }
+    a:hover{ text-decoration-color: var(--pitch) }
+    a:focus-visible{ outline: 2px solid var(--pitch); outline-offset: 3px; border-radius: 2px }
 
     /* hero */
-    .hero{ position:relative; padding: 80px 0 40px }
-    .hero-grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap:40px; align-items:center }
-    .kicker{ color:var(--muted); text-transform:uppercase; letter-spacing:.18em; font-size:12px }
-    .title{ font-size: clamp(36px, 6vw, 64px); line-height:1.05; font-weight:900; letter-spacing:-.01em }
-    .title .stroke{ -webkit-text-stroke: 1px rgba(255,255,255,.45); color: transparent; text-shadow: none }
-    .subtitle{ color:var(--muted); font-size: clamp(16px, 2.2vw, 18px) }
-    .cta{ display:flex; gap:12px; margin-top:22px; flex-wrap:wrap }
+    .hero{
+      font-size: clamp(1.55rem, 4.5vw, 2.1rem);
+      line-height: 1.3;
+      font-weight: 400;
+      margin: 0 0 3.5rem;
+      letter-spacing: -0.01em;
+    }
+    .hero em{ font-style: italic; font-weight: 500 }
 
-    /* visibility helpers */
-    .desktop-only{ display:inline }
-    .mobile-only{ display:none }
-    .email-line{ margin-top:8px; color:var(--muted) }
-    .email-line a{ text-decoration:underline; text-underline-offset:3px }
-
-    @media (max-width: 980px){
-      .desktop-only{ display:none }
-      .mobile-only{ display:inline-flex }
+    /* mono utility */
+    .eyebrow{
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 1rem;
     }
 
-    .hero-card{ background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow-2) }
-    .hero-card h4{ margin:0 0 8px 0 }
-    .hero-card p{ margin:0; color:var(--muted) }
+    /* index with dot leaders */
+    .index{ margin: 0 0 4.5rem }
+    .index ul{ list-style: none; margin: 0 0 1.6rem; padding: 0 }
+    .index li{ margin: 0 }
+    .toc{
+      display: flex;
+      align-items: baseline;
+      gap: .6em;
+      padding: .28rem 0;
+      text-decoration: none;
+      font-size: 1.05rem;
+    }
+    .toc .name{ font-weight: 500; white-space: nowrap }
+    .toc .leader{
+      flex: 1;
+      min-width: 2rem;
+      border-bottom: 1px dotted var(--faint);
+      transform: translateY(-.28em);
+      transition: border-color .15s ease;
+    }
+    .toc:hover .leader{ border-color: var(--pitch) }
+    .toc .status{
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .toc:hover .status{ color: var(--pitch) }
 
-    .blob{ position:absolute; right:-120px; top:-120px; width:520px; height:520px; background: radial-gradient(circle at 30% 30%, rgba(124,92,255,.45), transparent 50%), radial-gradient(circle at 70% 60%, rgba(0,212,255,.35), transparent 55%), radial-gradient(circle at 60% 10%, rgba(36,224,168,.35), transparent 60%); filter: blur(50px); opacity:.55; pointer-events:none; animation: float 10s ease-in-out infinite alternate }
-    @keyframes float{ to { transform: translateY(30px) translateX(-20px) scale(1.05) } }
+    /* entries */
+    .entry{ margin: 0 0 3.2rem; scroll-margin-top: 2rem; position: relative }
+    .entry header{
+      display: flex;
+      align-items: baseline;
+      gap: .8em;
+      flex-wrap: wrap;
+      margin-bottom: .4rem;
+    }
+    .mark{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; height: 30px;
+      border-radius: 7px;
+      background: #fff;
+      flex: none;
+      align-self: center;
+    }
+    .mark img{ width: 22px; height: 22px; object-fit: contain; display: block }
+    .wordmark{ height: 1.05rem; width: auto; display: block }
+    @media (prefers-color-scheme: dark){
+      .mark{ box-shadow: 0 0 0 1px var(--faint) }
+    }
+    @media (min-width: 50rem){
+      .mark{
+        position: absolute;
+        left: -3.2rem;
+        top: .05rem;
+      }
+    }
+    .entry h2{
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+    .tag{
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--pitch);
+    }
+    .entry p{ margin: 0 0 .7rem; color: var(--ink) }
+    .entry .role{ font-style: italic; color: var(--muted) }
+    .stack{
+      font-family: var(--mono);
+      font-size: .74rem;
+      color: var(--muted);
+      letter-spacing: .02em;
+      margin: 0;
+    }
 
-    /* sections */
-    section{ padding: 56px 0 }
-    .section-title{ display:flex; align-items:center; gap:12px; margin:0 0 20px 0 }
-    .section-title .dot{ width:10px; height:10px; border-radius:50%; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: 0 0 0 6px rgba(124,92,255,.15) }
-    .grid{ display:grid; gap:18px }
-
-    /* projects */
-    .projects{ grid-template-columns: repeat(12, 1fr) }
-    .project{ grid-column: span 6; background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); overflow:hidden; transition:.35s ease; position:relative }
-    .project:hover{ transform: translateY(-4px) }
-    .project .media{ height:220px; background: radial-gradient(600px 200px at 30% 10%, rgba(124,92,255,.22), transparent 60%), #0e0e14; display:flex; align-items:center; justify-content:center; font-family:"JetBrains Mono", monospace; color: #9aa3c7; font-size:14px }
-    .project .body{ padding:18px }
-    .chip{ display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background: rgba(124,92,255,.12); border:1px solid rgba(124,92,255,.35); color:#c9c4ff; font-size:12px }
-    .tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px }
-
-    /* timeline */
-    .timeline{ position:relative; padding-left:22px; border-left: 2px dashed rgba(255,255,255,.12) }
-    .timeline .item{ margin: 0 0 18px 0 }
-    .timeline .item h4{ margin:0 }
-    .timeline .item small{ color:var(--muted) }
-
-    /* skills */
-    .skills{ display:flex; flex-wrap:wrap; gap:10px }
-    .skill{ padding:10px 12px; border-radius:10px; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); font-weight:600; font-size:14px }
+    hr{
+      border: 0;
+      border-top: 1px solid var(--faint);
+      margin: 0 0 3rem;
+    }
 
     /* contact */
-    .contact{ display:grid; grid-template-columns: 1.1fr .9fr; gap:20px; align-items:center }
-    .panel{ background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding:24px }
-    .panel h3{ margin-top:0 }
-    input, textarea{
-      width:100%; padding:12px 14px; border-radius:10px; background:#0f0f14; border:1px solid rgba(255,255,255,.1); color:var(--text); outline:none; font: inherit; transition: .2s ease;
+    .contact p{ margin: 0 0 1.2rem }
+    .contact ul{
+      list-style: none; margin: 0; padding: 0;
+      display: flex; flex-wrap: wrap; gap: .4em 1.6em;
+      font-family: var(--mono); font-size: .82rem;
     }
-    input:focus, textarea:focus{ border-color: var(--ring); box-shadow: 0 0 0 6px rgba(124,92,255,.08) }
-    textarea{ min-height:120px; resize:vertical }
 
-    footer{ padding: 26px 0 60px; color:var(--muted); text-align:center }
+    footer{
+      margin-top: 4.5rem;
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--muted);
+    }
 
-    /* responsive */
-    @media (max-width: 980px){ .hero-grid{ grid-template-columns: 1fr } .contact{ grid-template-columns: 1fr } .projects .project{ grid-column: span 12 } }
+    @media (prefers-reduced-motion: reduce){
+      *{ transition: none !important }
+    }
+    @media (max-width: 420px){
+      .toc .status{ font-size: .62rem }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <div class="logo">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12C3 7.029 7.029 3 12 3c4.971 0 9 4.029 9 9s-4.029 9-9 9-9-4.029-9-9Z" stroke="url(#g)" stroke-width="2"/><path d="M7.5 12h9M12 7.5v9" stroke="#c9c4ff" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="g" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#7c5cff"/><stop offset="1" stop-color="#00d4ff"/></linearGradient></defs></svg>
-        Tarik Perviz
-        <span class="badge">Portfolio</span>
-      </div>
-      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" stroke="#c9c4ff" stroke-width="2" stroke-linecap="round"/></svg>
-</button>
-<nav class="menu" id="menu">
-  <a href="#projects" class="btn">Projects</a>
-  <a href="#experience" class="btn">Experience</a>
-  <a href="#contact" class="btn">Contact</a>
-  <a href="/resume" class="btn primary">Resume</a>
-</nav>
-    </div>
-  </header>
+  <main class="page">
 
-  <main>
-    <section class="hero">
-      <div class="blob" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div>
-          <div class="kicker">Web • Mobile • UI/UX</div>
-          <h1 class="title">Hi, I'm <span class="stroke">Tarik</span> — I build fast, beautiful digital products.</h1>
-          <p class="subtitle">Junior frontend developer based in Sarajevo, focused on React/Next.js and TypeScript. I build fast, responsive UIs and pay close attention to detail, performance, and clean code.</p>
-          <div class="cta">
-            <a class="btn primary" href="#projects">See my work</a>
-            <a class="btn" href="mailto:perviztarik@gmail.com">Mail me</a>
-            <a class="btn" href="https://www.linkedin.com/in/tarik-perviz" target="_blank" rel="noopener">LinkedIn</a>
-          </div>
-        </div>
-        <div class="grid">
-          <div class="hero-card">
-            <h4>Current Focus</h4>
-            <p>Prediction market platform.</p>
-          </div>
-          <div class="hero-card">
-            <h4>Available for</h4>
-            <p>Jobs, Freelance work and collaborations. Let's build something great.</p>
-          </div>
-        </div>
-      </div>
+    <h1 class="hero">I'm <em>Tarik Perviz</em>, a full-stack engineer in Sarajevo. I build products end to end at MasterBuild.ai, and ship my own on the side.</h1>
+
+    <nav class="index" aria-label="Project index">
+      <p class="eyebrow">At MasterBuild.ai</p>
+      <ul>
+        <li><a class="toc" href="#dismow"><span class="name">Dismow</span><span class="leader"></span><span class="status">closed testing</span></a></li>
+        <li><a class="toc" href="#beksson"><span class="name">Beksson</span><span class="leader"></span><span class="status">closed testing</span></a></li>
+        <li><a class="toc" href="#brayns"><span class="name">Brayns</span><span class="leader"></span><span class="status">landing page</span></a></li>
+      </ul>
+      <p class="eyebrow">Personal</p>
+      <ul>
+        <li><a class="toc" href="#mladitalenti"><span class="name">MladiTalenti</span><span class="leader"></span><span class="status">live</span></a></li>
+        <li><a class="toc" href="#chalk"><span class="name">Chalk</span><span class="leader"></span><span class="status">in development</span></a></li>
+      </ul>
+    </nav>
+
+    <article class="entry" id="dismow">
+      <header>
+        <h2>
+          <picture>
+            <source srcset="/assets/img/projects/dismow-logo-light.svg" media="(prefers-color-scheme: dark)">
+            <img class="wordmark" src="/assets/img/projects/dismow-logo-dark.svg" alt="Dismow">
+          </picture>
+        </h2>
+        <span class="tag">closed testing</span>
+      </header>
+      <p>A real-money prediction market. Users buy and sell YES/NO shares on future events at prices set by an automated market maker, and get paid out when markets resolve.</p>
+      <p class="role">Full-stack: the fixed-product market maker, a double-entry ledger where balances are derived rather than stored, payment webhooks, realtime prices over websockets, and the AWS infrastructure behind it.</p>
+      <p class="stack">NestJS &middot; Next.js &middot; PostgreSQL &middot; Redis &middot; AWS</p>
+    </article>
+
+    <article class="entry" id="beksson">
+      <header><span class="mark"><img src="/assets/img/projects/beksson-mark.svg" alt=""></span><h2><a href="https://beksson.ai">Beksson</a></h2><span class="tag">closed testing</span></header>
+      <p>An AI-assisted support and engineering portal. Customers file cases on a shared timeline; a tenant-bound AI engine investigates with approved read-only tools and drafts replies that a human reviews before anything reaches the customer.</p>
+      <p class="role">Full-stack across the .NET services, the custom MCP server, and the React app.</p>
+      <p class="stack">.NET &middot; React &middot; Azure &middot; MCP</p>
+    </article>
+
+    <article class="entry" id="brayns">
+      <header><span class="mark"><img src="/assets/img/projects/brayns-mark.svg" alt=""></span><h2><a href="https://brayns.ai">Brayns</a></h2><span class="tag">landing page</span></header>
+      <p>An AI autopilot for compliance. My part was the marketing site: an editorial design system with scroll-pinned storytelling sections and a careers area.</p>
+      <p class="stack">Next.js &middot; Tailwind &middot; Framer Motion</p>
+    </article>
+
+    <hr>
+
+    <article class="entry" id="mladitalenti">
+      <header><span class="mark"><img src="/assets/img/projects/mladitalenti-mark.png" alt=""></span><h2><a href="https://mladitalenti.ba">MladiTalenti</a></h2><span class="tag">live</span></header>
+      <p>The first student-work marketplace in Bosnia and Herzegovina. Verified students find gigs and internships, clients post listings and hire, and trust is built without on-platform payments: identity vetting, double-blind reviews that unlock only when both sides submit, disputes, and moderation.</p>
+      <p class="role">Built the whole thing, including realtime chat and the trust-and-safety machinery.</p>
+      <p class="stack">Next.js &middot; NestJS &middot; Prisma &middot; PostgreSQL</p>
+    </article>
+
+    <article class="entry" id="chalk">
+      <header><span class="mark"><img src="/assets/img/projects/chalk-mark.png" alt=""></span><h2>Chalk</h2><span class="tag">in development</span></header>
+      <p>An AI assistant for football coaching staff, in development with a professional club. Every coach on the staff gets an agent for their job, and drills are sketched on a 2D pitch from a text prompt, then edited the same way. The AI drafts, the coach decides.</p>
+      <p class="stack">React &middot; Claude API &middot; API-Football</p>
+    </article>
+
+    <hr>
+
+    <section class="contact">
+      <p class="eyebrow">Contact</p>
+      <p>Open to interesting work and collaborations.</p>
+      <ul>
+        <li><a href="mailto:perviztarik@gmail.com">perviztarik@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/tarik-perviz" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/TarikPerviz" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="/resume">Resume</a></li>
+      </ul>
     </section>
 
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title"><span class="dot"></span><span>Featured Projects</span></h2>
-        <div class="grid projects">
-          <!-- Project 1 -->
-          <article class="project">
-            <div class="media">Next.js • TypeScript</div>
-            <div class="body">
-              <div class="chip">Prediction market UI</div>
-              <p style="margin:10px 0 0;color:var(--muted)">Built and shipped web UI, integrating live market data and core user flows.</p>
-              <div class="tags">
-                <span class="chip">Next.js</span>
-                <span class="chip">TypeScript</span>
-                <span class="chip">React</span>
-              </div>
-            </div>
-          </article>
-          <!-- Project 2 -->
-          <article class="project">
-            <div class="media">Next.js • React</div>
-            <div class="body">
-              <div class="chip">MladiTalenti.app</div>
-              <p style="margin:10px 0 0;color:var(--muted)">Marketplace connecting students with clients for short-term projects, streamlining job posting and matching.</p>
-              <div class="tags">
-                <span class="chip">Marketplace</span>
-                <span class="chip">Fullstack</span>
-              </div>
-            </div>
-          </article>
-          <!-- Project 3 -->
-          <article class="project">
-            <div class="media">Design • Branding</div>
-            <div class="body">
-              <div class="chip">Projekat Studio</div>
-              <p style="margin:10px 0 0;color:var(--muted)">Studio delivering web and design services for small businesses: landing pages, UI and marketing visuals.</p>
-              <div class="tags">
-                <span class="chip">Figma</span>
-                <span class="chip">Web Design</span>
-              </div>
-            </div>
-          </article>
-          <!-- Project 4 -->
-          <article class="project">
-            <div class="media">Flutter • Firebase</div>
-            <div class="body">
-              <div class="chip">TravelCini — Travel Assistant App</div>
-              <p style="margin:10px 0 0;color:var(--muted)">Mobile app that helps users plan trips and communicate via real-time chat.</p>
-              <div class="tags">
-                <span class="chip">Flutter</span>
-                <span class="chip">Firebase</span>
-                <span class="chip">Mobile</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <h2 class="section-title"><span class="dot"></span><span>Experience</span></h2>
-        <div class="timeline">
-          <div class="item">
-            <h4>Frontend Developer — Prediction Market -NDA-</h4>
-            <small>2025 — now</small>
-            <p style="color:var(--muted)">Built and shipped the prediction-market web UI (Next.js/TS), integrating live market data.</p>
-          </div>
-          <div class="item">
-            <h4>Fullstack Developer — finshark</h4>
-            <small>2024 — 2025</small>
-            <p style="color:var(--muted)">Developed an internal customer-support app with Entra ID SSO, Azure CI/CD and React + Java stack.</p>
-          </div>
-          <div class="item">
-            <h4>Mobile Developer — TravelCini.com</h4>
-            <small>2025 — 2026</small>
-            <p style="color:var(--muted)">Built a Flutter + Firebase mobile app that helps users plan trips and communicate via real-time chat.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="container">
-        <h2 class="section-title"><span class="dot"></span><span>Education</span></h2>
-        <div class="timeline">
-          <div class="item">
-            <h4>International Burch University</h4>
-            <small>2022 — 2025</small>
-          </div>
-          <div class="item">
-            <h4>Electrical Engineering High School</h4>
-            <small>2018 — 2022</small>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <h2 class="section-title"><span class="dot"></span><span>Skills</span></h2>
-        <div class="skills">
-          <span class="skill">Front End Development</span>
-          <span class="skill">Back End Development</span>
-          <span class="skill">HTML/CSS</span>
-          <span class="skill">JavaScript / TypeScript</span>
-          <span class="skill">Next.js / React</span>
-          <span class="skill">Flutter / Mobile</span>
-          <span class="skill">Java Spring</span>
-          <span class="skill">AI Tools</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container contact">
-        <!-- LEFT: Info panel (stays as a pretty box on desktop) -->
-        <div class="panel">
-          <h3>Let’s build something great</h3>
-          <p style="color:var(--muted); margin-top:6px">Currently open for jobs, freelance, internships and collabs. Sarajevo • Remote‑friendly.</p>
-          <!-- Desktop: show email line; Mobile: show Contact button -->
-          <p class="email-line desktop-only">
-            📞 <a href="tel:+38761205505" style="margin-right:12px">+387-61-205-505</a>
-            📧 <a href="mailto:perviztarik@gmail.com">perviztarik@gmail.com</a>
-          </p>
-          <div class="cta" style="margin-top:12px">
-            <a class="btn primary mobile-only" href="tel:+38761205505">Call me</a>
-            <a class="btn primary mobile-only" href="mailto:perviztarik@gmail.com">Contact me</a>
-            <a class="btn" href="/resume">View Resume</a>
-          </div>
-        </div>
-
-        <!-- RIGHT: Form panel (side‑by‑side on desktop, below on mobile) -->
-        <form action="https://formspree.io/f/xkgqrqpk" method="POST" class="panel" name="contact" autocomplete="off">
-          <h3>Quick message</h3>
-          <input type="hidden" name="form-name" value="contact" />
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px">
-            <input name="name" placeholder="Your name" required>
-            <input type="email" name="email" placeholder="Email" required>
-          </div>
-          <textarea name="message" placeholder="Write your message here…" style="margin-top:10px" required></textarea>
-          <button class="btn primary" type="submit" style="margin-top:10px">Send</button>
-        </form>
-      </div>
-    </section>
+    <footer>
+      &copy; <span id="y"></span> Tarik Perviz &middot; Sarajevo
+    </footer>
   </main>
 
-  <footer>
-    <div class="container">
-      <div>© <span id="y"></span> Tarik Perviz · Sarajevo · <a href="https://www.linkedin.com/in/tarik-perviz" target="_blank" rel="noopener">LinkedIn</a></div>
-    </div>
-  </footer>
-
   <script>
-    // micro niceties
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // mobile menu toggle
-    const hb = document.querySelector('.hamburger');
-    const menu = document.getElementById('menu');
-    if(hb && menu){
-      hb.addEventListener('click', ()=>{
-        const open = menu.classList.toggle('open');
-        hb.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-      // close menu when clicking a link
-      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=> menu.classList.remove('open')));
-      // reset on resize (avoid stuck state)
-      addEventListener('resize', ()=>{ if(innerWidth>820) menu.classList.remove('open') });
-    }
-
-    // reveal-on-scroll
-    const reveal = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){ e.target.animate([{opacity:0, transform:'translateY(10px)'},{opacity:1, transform:'none'}], {duration:500, easing:'ease-out'}); reveal.unobserve(e.target); }
-      });
-    }, {threshold:.12});
-    document.querySelectorAll('.project, .hero-card, .panel, .timeline .item, .skill').forEach(el=>reveal.observe(el));
-  // enhance mobile menu close & form reset
-    (function(){
-      const hb=document.querySelector('.hamburger');
-      const menu=document.getElementById('menu');
-      if(hb && menu){
-        document.addEventListener('click', (e)=>{ if(!menu.contains(e.target) && !hb.contains(e.target)) menu.classList.remove('open'); });
-        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') menu.classList.remove('open'); });
-      }
-      const contact=document.querySelector('form[name="contact"]');
-      if(contact){
-        contact.addEventListener('submit', ()=>{ setTimeout(()=>{ try{ contact.reset(); }catch(_){} }, 120); });
-        window.addEventListener('pageshow', (ev)=>{ if(ev.persisted){ try{ contact.reset(); }catch(_){} } });
-      }
-    })();
   </script>
 </body>
 </html>
